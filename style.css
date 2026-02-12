@@ -7,26 +7,26 @@
 }
 
 body {
-    background-color: #F3ECE3;
+    background-color: #FAF7F2;
 }
 
 
 /* NAVIGATION BAR */
 
 .nav__logo {
-    height: 80px;
+    width: 160px;
 }
 
 nav {
     height: 80px;
     display: flex;
-    background-color: #784d39;
+    background-color: #C9D6CF;
 }
 
 .nav--content {
     display: flex;
     width: 100%;
-    max-width: 1000px;
+    max-width: 1200px;
     justify-content: space-between;
     margin: 0 auto;
     align-items: center;
@@ -56,9 +56,11 @@ nav {
 }
 
 .nav__anchor--primary:hover {
-    color: #784d39;
     background-color: #cb5f3e;
 }
-.nav__anchor:hover {
+.anchor__hover-effect:hover {
     color: #cb5f3e;
 }
+
+/* HEADER */
+
