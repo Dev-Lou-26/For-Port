@@ -39,6 +39,14 @@ p {
     line-height: 1.5;
 }
 
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 ul {
     display: flex; 
     list-style-type: none;
@@ -56,7 +64,32 @@ button:active {
     color: #7342d6;
 }
 
+/* DROP DOWN 
 
+.btn__menu {
+    font-size: 40px;
+    text-align: center;
+    border: none;
+    background-color: transparent;
+    color: #ffff;
+}
+
+.menu__backdrop {
+    position: absolute;
+    background-color: #242424;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.btn__menu--close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+*/
 /* NAVIGATION BAR */
 
 #landing {
@@ -224,8 +257,108 @@ header {
 }
 
 /* FEATURES */
+/* RECENT */
 
 #features {
     background-color: rgba(115, 66, 214, 0.1);
-    height: 1000px;
+    padding-top: 8vw;
+}
+
+
+.books {
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.book {
+    width: 25%;
+    padding: 24px;
+}
+
+.book__image {
+    max-height: 380px;
+    transition: all 300ms ease;
+    cursor: no-drop;
+}
+
+.book__image--wrapper {
+    margin-bottom: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+}
+
+.book:hover .book__image {
+    transform: scale(1.02);
+}
+
+.book__title {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.book__title:hover {
+    text-decoration: underline;
+    cursor: not-allowed;
+}
+
+.book__ratings {
+    margin-bottom: 8px;
+    color: #fabf2a
+}
+
+.book__price--normal {
+    text-decoration: line-through;
+    padding-right: 6px;
+    color: grey;
+}
+
+/* EXPLORE */
+
+#explore {
+    height: 35vh;
+    background-color: rgba(115, 66, 214, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #242424;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__logo {
+    display: flex;
+}
+
+.footer__landing {
+    margin: 0 auto;
+}
+
+.footer__logo--image {
+   width: 180px;
+   filter: grayscale(1) invert(1);}
+
+.no__cursor {
+    cursor: not-allowed;
+}
+
+.footer__link,
+.footer__copyright {
+    color: white;
+}
+
+.footer__list {
+  margin: 20px 0 24px 0;
+}
+
+.footer__link {
+  padding: 0 8px;
 }
