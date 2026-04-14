@@ -5,19 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/603c241902.js" crossorigin="anonymous"></script>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
+</style>
+
 </head>
 <body>
     <section id="landing">
         <nav>
             <div class="nav__container">
-            <div class="nav__content">
             <img src="assets/Library.svg" class="nav__logo" alt="library logo">
             <ul class="nav__list">
                 <li class="nav__item"><a href="#home" class="nav__anchor">Home</a></li>
                 <li class="nav__item"><a href="#contact" class="nav__anchor">Contact</a></li>
-                <li class="nav__item"><a href="#books" class="nav__anchor nav__anchor--primary">Books</a></li>
+                <li class="nav__item"><a href="#books" class="nav__anchor--primary nav__anchor">Books</a></li>
             </ul>
-        </div>
         </div>
         </nav>
         <header>
@@ -27,9 +30,47 @@
                     <h2>Find your dream book with <span class="purple">Library</span></h2>
                     <button class="btn">Browse Books</button>
                 </div>
+                <div class="header__image--wrapper">
                 <img src="assets/Undraw_Books.svg" class="undraw" alt="Undraw Illustration">
+                </div>
             </div>
         </header>
     </section>
+
+    <main>
+        <section id="highlights">
+            <div class="container">
+                <div class="row">
+                    <h2 class="section__title">Why choose <span class="purple">Library</span>?</h2>
+                    <div class="highlight__wrapper">
+                        <div class="highlight">
+                            <div class="highlight__image">
+                                <i class="fa-solid fa-bolt-lightning"></i>
+                                </div>
+                            <h3 class="highlight__subtitle">Quick and Easy</h3>
+                            <p class="highlight__para">Get instant access to the book you purchase online</p>
+                        </div>
+                        <div class="highlight">
+                            <div class="highlight__image">
+                                <i class="fa-solid fa-book"></i>
+                                </div>
+                            <h3 class="highlight__subtitle">10,000+ books</h3>
+                            <p class="highlight__para">Library has books in all of your favorite categories</p>
+                        </div>
+                        <div class="highlight">
+                            <div class="highlight__image">
+                                <i class="fa-solid fa-tags"></i>                            </div>
+                            <h3 class="highlight__subtitle">Affordable</h3>
+                            <p class="highlight__para">Get your hands on popular books for as little as $10</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features">
+            
+        </section>
+    </main>
 </body>
 </html>
