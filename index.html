@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Library</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/603c241902.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
     <style>
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
 </style>
@@ -18,33 +19,34 @@
             <img src="assets/Library.svg" class="nav__logo" alt="Library Logo">
             <ul class="nav__list">
                 <li class="nav__item"><a href="#home" class="nav__anchor">Home</a></li>
-                <li class="nav__item"><a href="#contact" class="nav__anchor">Contact</a></li>
+                <li class="nav__item"><a href="#contact" class="nav__anchor no__cursor">Contact</a></li>
                 <li class="nav__item"><a href="#features" class="nav__anchor--primary nav__anchor">Books</a></li>
             </ul>
         </div>
 
 
-        <button class="btn__menu">
+        <button class="btn__menu" onclick="openMenu()">
             <i class="fa-solid fa-bars"></i>
         </button>
         <div class="menu__backdrop">
-            <button class="btn__menu btn__menu--close">
+            <button class="btn__menu btn__menu--close" onclick="closeMenu()">
                 <i class="fa-solid fa-xmark"></i>
             </button>
-            <ul>
+            <ul class="menu__links">
                 <li class="menu__list"><a href="#landing" class="menu__link">Home</a></li>
                 <li class="menu__list"><a href="#features" class="menu__link">Books</a></li>
                 <li class="menu__list"><a href="#" class="menu__link no__cursor">Contact</a></li>
             </ul>
         </div>
-
         </nav>
+
+
         <header>
             <div class="header__container">
                 <div class="header__description">
                     <h1>America's most awarded online library platform</h1>
                     <h2>Find your dream book with <span class="purple">Library</span></h2>
-                    <button class="btn" target="#features">Browse Books</button>
+                    <a href="#features"><button class="btn">Browse Books</button></a>
                 </div>
                 <div class="header__image--wrapper">
                 <img src="assets/Undraw_Books.svg" class="undraw" alt="Undraw Illustration">
@@ -55,7 +57,7 @@
 
     <main>
         <section id="highlights">
-            <div class="container">
+            <div class="container highlights">
                 <div class="row">
                     <h2 class="section__title">Why choose <span class="purple">Library</span>?</h2>
                     <div class="highlight__wrapper">
@@ -285,7 +287,7 @@
                                 <img src="assets/book-7.jpg" class="book__image" alt="Book Image">
                             </figure>
                             <div class="book__title">
-                                Your Nest Five Moves
+                                Your Next Five Moves
                             </div>
                             <div class="book__ratings">
                                 <i class="fa-solid fa-star"></i>
@@ -325,7 +327,7 @@
         <div class="container">
             <div class="row">
                 <h2 class="section__title">Explore More <span class="purple">Books</span></h2>
-                <button class="btn">Browse Books</button>
+                <a href="#features"><button class="btn">Browse Books</button></a>
             </div>
         </div>
     </section>

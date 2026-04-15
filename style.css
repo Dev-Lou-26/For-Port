@@ -5,7 +5,9 @@
     font-family: 'roboto', serif;
 }
 
-/* BLANKET */
+
+/* -------------------------BLANKET------------------------ */
+
 
 img {
     width: 100%;
@@ -64,33 +66,86 @@ button:active {
     color: #7342d6;
 }
 
-/* DROP DOWN 
+
+/* -------------------BUTTON MENU--------------------- */
+
 
 .btn__menu {
     font-size: 40px;
     text-align: center;
     border: none;
     background-color: transparent;
-    color: #ffff;
+    color: #7342d6;
+    display: none;
+}
+
+.menu__btn--close {
+    color: white;
+}
+
+.menu__links {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .menu__backdrop {
-    position: absolute;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
     background-color: #242424;
     top: 0;
-    bottom: 0;
     left: 0;
-    right: 0;
     z-index: 100;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    transform: translateX(100%);
+    transition: all 300ms ease;
 }
 
 .btn__menu--close {
     position: absolute;
     right: 20px;
     top: 10px;
+    color: white;
+    transition: all 200ms ease;
 }
-*/
-/* NAVIGATION BAR */
+
+.btn__menu--close:hover {
+    transform: rotate(90deg);
+}
+
+ 
+.menu__link {
+    color: white;
+    font-size: 40px;
+}
+
+.menu__list {
+    padding: 32px 0;
+}
+
+.menu--open .menu__backdrop {
+    visibility: visible;
+    transform: translateX(0)
+}
+
+.menu--open::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 90;
+}
+
+
+/* --------------------------NAVIGATION BAR---------------------------- */
+
 
 #landing {
     background-color: rgba(115, 66, 214, 0.1)
@@ -143,7 +198,8 @@ nav {
 }
 
 
-/* HEADER */
+/* ---------------------------HEADER------------------------- */
+
 
 header {
     height: calc(100vh - 80px);
@@ -168,6 +224,7 @@ header {
     padding: 24px; 
     z-index: 2;
     position: relative;
+    display: flex;
 }
 
 .btn {
@@ -180,7 +237,9 @@ header {
     margin: 0 auto;
 }
 
-/* HIGHLIGHTS */
+
+/* ------------------------------HIGHLIGHTS----------------------------- */
+
 
 #highlights {
     position: relative;
@@ -256,8 +315,9 @@ header {
     text-align: center;
 }
 
-/* FEATURES */
-/* RECENT */
+
+/* -------------------FEATURES *//* RECENT-------------------- */
+
 
 #features {
     background-color: rgba(115, 66, 214, 0.1);
@@ -313,7 +373,9 @@ header {
     color: grey;
 }
 
-/* EXPLORE */
+
+/* ---------------------EXPLORE------------------- */
+
 
 #explore {
     height: 35vh;
@@ -324,7 +386,7 @@ header {
     text-align: center;
 }
 
-/* FOOTER */
+/* ----------------------------FOOTER----------------------- */
 
 footer {
     background-color: #242424;
@@ -361,4 +423,62 @@ footer {
 
 .footer__link {
   padding: 0 8px;
+}
+
+
+/* ------------------------MEDIA----------------------- */
+
+
+@media (max-width: 550px) {
+    .nav__anchor {
+        display: none;
+    }
+
+    .btn__menu {
+        display: block;
+    }
+
+
+    .books {
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+    }
+
+    .book {
+        width: 80%;
+        margin-bottom: 24px;
+    }
+
+    .highlight {
+        width: 80%;
+        margin-bottom: 24px;
+    }
+
+    .highlight__wrapper {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 35px
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    .header__img {
+    width: 100%;
+    max-height: 50vh;
+    object-fit: contain;
+    }
+
+    .highlights {
+        margin-top: 800px;
+    }
+
 }
